@@ -1,0 +1,221 @@
+import { Platform, StatusBar, StyleSheet } from 'react-native';
+import GS, { customFont, normalizedFontSize } from '../../GlobeStyle';
+
+const styles = StyleSheet.create({
+  root: { flex: 1, backgroundColor: '#fff' },
+  rootWrapper: {
+    flex: 1,
+    paddingBottom: 3,
+    marginTop: Platform.OS === 'ios' ? 20 : StatusBar.currentHeight,
+  },
+  modalContainer: {
+    flex: 1,
+    margin: 0,
+    padding: 0,
+  },
+  container: {
+    backgroundColor: '#fff',
+    flex: 1,
+    // paddingHorizontal: 20,
+  },
+  placeOrder: {},
+  footer: {
+    marginTop: 15,
+    bottom: 0,
+    marginBottom: 10,
+    paddingHorizontal: 15,
+    // backgroundColor: 'red',
+  },
+  paymentTitleWrapper: {
+    marginRight: 10,
+    // flex: 1,
+    marginVertical: 10,
+  },
+  paymentTitleText: {
+    fontSize: 15,
+    marginBottom: 5,
+    color: GS.textColor,
+  },
+  paymentSummaryWrapper: {
+    // marginBottom: 0,
+    // marginLeft: 1,
+    // marginVertical: 10,
+  },
+  paymentTotalWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 0,
+    marginBottom: 10,
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  totalText: {
+    color: GS.textColorGreyDark2,
+    fontSize: normalizedFontSize(6.5),
+  },
+  total: {
+    color: GS.textColorGreyDark3,
+    fontSize: normalizedFontSize(7),
+  },
+  couponCartItemWrapper: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    justifyContent: 'space-between',
+    borderBottomColor: 'gray',
+    borderBottomWidth: 0.2,
+  },
+  desc: { justifyContent: 'center', flex: 1 },
+  descText: {
+    fontFamily: customFont.axiformaMedium,
+    fontSize: normalizedFontSize(7.2),
+    maxWidth: 150,
+  },
+  img: {
+    marginRight: 15,
+  },
+  smallThumb: {
+    width: 60,
+    height: 60,
+    // borderWidth: 1,
+    borderColor: '#ddd',
+    resizeMode: 'cover',
+    borderRadius: 35,
+  },
+  opacity: {
+    backgroundColor: '#00000099',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  errorWrapper: {
+    backgroundColor: '#fff',
+    overflow: 'hidden',
+    width: '75%',
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imageWrapper: {
+    width: '100%',
+  },
+  dots: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  exclamation: {
+    resizeMode: 'contain',
+    height: 175,
+    width: 175,
+    marginVertical: 10,
+  },
+  transactionFailed: {
+    fontSize: normalizedFontSize(12),
+    fontFamily: customFont.axiformaBold,
+    paddingTop: 20,
+    paddingBottom: 10,
+    color: GS.textColorGreyDark3,
+  },
+  tryText: {
+    fontSize: normalizedFontSize(6.5),
+    paddingBottom: 10,
+    color: GS.textColorGreyDark2,
+  },
+  buttonTouchable: {
+    backgroundColor: '#678c6b',
+    width: '90%',
+    paddingVertical: 15,
+    alignItems: 'center',
+    borderRadius: 20,
+    margin: 10,
+  },
+  okText: {
+    fontFamily: customFont.axiformaBold,
+    color: '#fff',
+  },
+
+  wrapper: { flexDirection: 'row', marginBottom: 15 },
+  deliveryOptionText: { fontSize: normalizedFontSize(8.1) },
+  button: {
+    flexDirection: 'row',
+    paddingTop: 10,
+    paddingRight: 25,
+    alignItems: 'center',
+    flex: 1,
+  },
+  mr15: { marginRight: 15 },
+  text: { color: GS.textColorGrey, fontSize: normalizedFontSize(7) },
+  modalWrapper: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    margin: 0,
+    padding: 0,
+  },
+  serviceButton: {
+    marginVertical: 5,
+    marginRight: 'auto',
+    fontSize: normalizedFontSize(8.5),
+  },
+  opacityStyle: {
+    flexDirection: 'row',
+    padding: 5,
+    alignItems: 'center',
+    marginVertical: 5,
+  },
+  lottieContainer: {
+    width: 45,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    marginRight: 10,
+  },
+  lottieContainerMini: {
+    width: 45,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    marginRight: 'auto',
+  },
+  lottiePickup: {
+    width: 65,
+    height: 65,
+  },
+  lottieDelivery: {
+    width: 65,
+    height: 65,
+  },
+  flex1: { flex: 1 },
+  lottieStyle: {
+    height: 65,
+    width: 65,
+  },
+  pv10: { paddingVertical: 10 },
+  deliveryErrorWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#ffcccc',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginBottom: 15,
+    borderRadius: 5,
+  },
+  deliveryErrorText: {
+    marginLeft: 10,
+    color: GS.errorRed,
+    fontSize: normalizedFontSize(7),
+    paddingRight: 20,
+  },
+  modalcontainer: {
+    backgroundColor: '#fff',
+    width: '100%',
+    padding: 20,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+  },
+});
+
+export default styles;
