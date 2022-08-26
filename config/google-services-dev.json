@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "814032381231",
+    "firebase_url": "https://katch-sandbox.firebaseio.com",
+    "project_id": "katch-sandbox",
+    "storage_bucket": "katch-sandbox.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814032381231:android:8285316aa8aa16b787adda",
+        "android_client_info": {
+          "package_name": "com.aktech.katch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814032381231-l2an0ks0d9b33n03eqqfqfmdm238njbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKJEUUN6fnHFi2gDv2q1Q6Y9Dh7Yjuffk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814032381231-l2an0ks0d9b33n03eqqfqfmdm238njbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

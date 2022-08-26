@@ -1,0 +1,125 @@
+import { StyleSheet } from 'react-native';
+import GS, { customFont, normalizedFontSize } from '../../GlobeStyle';
+
+export default StyleSheet.create({
+  cprice: {
+    fontSize: normalizedFontSize(8.5),
+    fontFamily: customFont.axiformaExtraBold,
+    color: GS.logoGreen,
+    marginLeft: 10,
+  },
+  cpricel: {
+    fontSize: normalizedFontSize(8),
+    fontFamily: customFont.axiformaSemiBold,
+  },
+  strikeprice: {
+    textDecorationLine: 'line-through',
+    paddingVertical: 2,
+  },
+  flexRow: {
+    flexDirection: 'row',
+  },
+  justifyCenter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  placeholder: {
+    minWidth: 110,
+    width: '100%',
+    height: '100%',
+    backgroundColor: GS.placeHolderColor,
+  },
+  flex1: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    minHeight: 100,
+    borderRadius: 8,
+    overflow: 'hidden',
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    backgroundColor: '#fff',
+    borderWidth: 0.2,
+    borderColor: 'silver',
+    marginBottom: 10,
+  },
+  maxH110: {
+    maxHeight: 150,
+    height: 150,
+    flex: 1,
+  },
+  imageWrapper: {
+    borderRadius: 8,
+    borderBottomEndRadius: 0,
+    borderBottomStartRadius: 0,
+    overflow: 'hidden',
+    flexDirection: 'column',
+    flex: 1,
+    width: '100%',
+  },
+  containerStyle: {
+    height: '100%',
+    width: '100%',
+    borderRightWidth: 0.5,
+    borderColor: 'silver',
+    overflow: 'hidden',
+    minWidth: '30%',
+  },
+  textWrapper: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 15,
+    paddingVertical: 17,
+    borderRadius: 10,
+    marginTop: -15,
+    minHeight: 110,
+    paddingBottom: 5,
+  },
+  name: {
+    fontSize: normalizedFontSize(10),
+    fontFamily: customFont.axiformaExtraBold,
+    paddingTop: 8,
+  },
+  description: {
+    fontSize: normalizedFontSize(6),
+    paddingVertical: 5,
+    fontFamily: customFont.axiformaRegular,
+    color: GS.textColorGrey,
+    lineHeight: normalizedFontSize(9.5),
+  },
+  discountLabelWrapper: {
+    backgroundColor: GS.logoRed,
+    maxWidth: 50,
+    maxHeight: 50,
+    minHeight: 50,
+    minWidth: 50,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    marginRight: 20,
+    alignSelf: 'flex-end',
+    position: 'absolute',
+    top: -25,
+    right: 10,
+  },
+  discountLabel: {
+    fontFamily: customFont.axiformaSemiBold,
+    fontSize: normalizedFontSize(8.2),
+    color: '#fff',
+  },
+  expireText: {
+    color: GS.logoGreen,
+    fontFamily: customFont.axiformaSemiBold,
+    fontSize: normalizedFontSize(6.2),
+  },
+  pv2: {
+    paddingVertical: 2,
+  },
+  expireLabel: {
+    fontFamily: customFont.axiformaSemiBold,
+    fontSize: normalizedFontSize(6.2),
+  },
+});

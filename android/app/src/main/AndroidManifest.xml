@@ -1,0 +1,84 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.aktech.katch">
+    <queries>
+      <package android:name="com.whatsapp" />
+      <package android:name="com.whatsapp.w4b"/>
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- image picker permission - enable at a later time-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- image picker permission -->
+
+    <!-- location permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- location permission -->
+    
+    <!--  react-native-cached-image -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--  react-native-cached-image -->
+    
+    <!-- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" /> -->
+
+    <application
+      android:requestLegacyExternalStorage="true"
+      android:usesCleartextTraffic="true"
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+
+      <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBicH11qlmsFMpTtSJ3zFRNZsbbCzG7reM"/>
+
+      <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+      <activity
+          android:name=".SplashActivity"
+          android:theme="@style/SplashTheme"
+          android:label="@string/app_name">
+          <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>
+      </activity>
+      
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">
+        <intent-filter android:autoVerify="true">
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="https"
+                android:host="app.katchkw.com" />
+        </intent-filter>
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="https"
+                android:host="www.app.katchkw.com" />
+        </intent-filter>
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="katchkw" />
+        </intent-filter>
+      </activity>
+
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+    </application>
+
+</manifest>
