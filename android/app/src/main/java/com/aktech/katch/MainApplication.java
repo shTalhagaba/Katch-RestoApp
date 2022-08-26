@@ -2,7 +2,6 @@ package com.aktech.katch;
 
 import android.app.Application;
 import android.content.Context;
-import com.facebook.react.BuildConfig;
 
 import com.aktech.katch.native_modules.ImageBulkLoaderPackage;
 import com.facebook.react.PackageList;
