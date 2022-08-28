@@ -23,10 +23,10 @@ export default props => {
 
 
 
-    return () => {
-      Keyboard.removeListener("keyboardDidShow", _keyboardDidShow);
-      Keyboard.removeListener("keyboardDidHide", _keyboardDidHide);
-    }
+    // return () => {
+    //   Keyboard.removeListener("keyboardDidShow", _keyboardDidShow);
+    //   Keyboard.removeListener("keyboardDidHide", _keyboardDidHide);
+    // }
   })
 
   

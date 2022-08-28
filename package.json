@@ -15,6 +15,7 @@
     "tron:adb": "adb reverse tcp:9090 tcp:9090"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@apollo/react-hooks": "^4.0.0",
     "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-native-community/blur": "^4.2.0",
@@ -37,7 +38,6 @@
     "@types/react-native-maps": "^0.24.1",
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "^1.6.6",
-    "apollo-client": "^2.6.10",
     "apollo-link-context": "^1.0.20",
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
