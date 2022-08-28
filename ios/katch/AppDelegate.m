@@ -3,6 +3,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "AppDelegate.h"
 
+#ifdef FB_SONARKIT_ENABLED
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -33,6 +34,7 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  #ifdef FB_SONARKIT_ENABLED
   [GMSServices provideAPIKey:@"AIzaSyBicH11qlmsFMpTtSJ3zFRNZsbbCzG7reM"];
   [FIRApp configure];
   {
@@ -56,8 +58,11 @@ static void InitializeFlipper(UIApplication *application) {
                                                    moduleName:@"katch"
                                             initialProperties:nil];
 
-  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-
+  if (@available(iOS 13.0, *)) {
+      rootView.backgroundColor = [UIColor systemBackgroundColor];
+  } else {
+      rootView.backgroundColor = [UIColor whiteColor];
+  }
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;

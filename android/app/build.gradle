@@ -1,5 +1,5 @@
 apply plugin: "com.android.application"
-//react native firbase
+
 
 import com.android.build.OutputFile
 
@@ -135,7 +135,7 @@ android {
         versionName "2.4.6"
         multiDexEnabled true
     }
-    dependencies {
+        dependencies {
         implementation 'androidx.multidex:multidex:2.0.1'  // <-- ADD THIS DEPENDENCY
         implementation 'com.facebook.fresco:fresco:2.0.0'
         implementation 'com.facebook.fresco:animated-gif:2.0.0'
@@ -188,7 +188,9 @@ android {
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
-                        defaultConfig.versionCode * 1000 + versionCodes.get(abi)            }
+                        defaultConfig.versionCode * 1000 + versionCodes.get(abi)
+            }
+
         }
     }
 }

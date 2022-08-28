@@ -64,7 +64,6 @@ echo location of your Java installation.
 
 goto fail
 
-
 :execute
 @rem Setup the command line
 
