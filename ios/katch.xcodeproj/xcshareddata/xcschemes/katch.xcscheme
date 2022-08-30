@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "katch.app"
-               BlueprintName = "katch"
+               BuildableName = "Katch.app"
+               BlueprintName = "Katch"
                ReferencedContainer = "container:katch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "katchTests.xctest"
-               BlueprintName = "katchTests"
+               BuildableName = "KatchTests.xctest"
+               BlueprintName = "KatchTests"
                ReferencedContainer = "container:katch.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -55,8 +55,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "katch.app"
-            BlueprintName = "katch"
+            BuildableName = "Katch.app"
+            BlueprintName = "Katch"
             ReferencedContainer = "container:katch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -78,8 +78,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "katch.app"
-            BlueprintName = "katch"
+            BuildableName = "Katch.app"
+            BlueprintName = "Katch"
             ReferencedContainer = "container:katch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
