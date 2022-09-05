@@ -37,7 +37,7 @@ const Screens = (props) => {
           <TabScreen
             name="Map"
             initialParams={{ searchString: '' }}
-            options={{ unmountOnBlur: false, tabBarVisible: true }}>
+            options={{ unmountOnBlur: false, headerShown: true }}>
             {(map) => (
               <ErrorBoundary screenName="Map">
                 <Map {...map} />
@@ -48,7 +48,7 @@ const Screens = (props) => {
           <TabScreen
             name="Search"
             initialParams={{ searchString: '' }}
-            options={{ tabBarVisible: true }}>
+            options={{ headerShown: true }}>
             {(search) => (
               <ErrorBoundary screenName="Search">
                 <Search {...search} />
@@ -56,7 +56,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="Home">
+          <TabScreen name="Home" options={{ headerShown: false }}>
             {(landing) => (
               <ErrorBoundary screenName="Home">
                 <Landing {...landing} />
@@ -64,7 +64,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="Cart" options={{ tabBarVisible: false }}>
+          <TabScreen name="Cart" options={{ headerShown: false }}>
             {(cart) => (
               <ErrorBoundary screenName="Cart">
                 <CartRouter {...cart} />
@@ -72,7 +72,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="Account" options={{ unmountOnBlur: true }}>
+          <TabScreen name="Account" options={{ unmountOnBlur: true, headerShown: false }}>
             {(auth) => (
               <ErrorBoundary screenName="Account">
                 <Auth {...auth} />
@@ -82,7 +82,7 @@ const Screens = (props) => {
 
           {/* here on wards, screens are not included in bottom tab */}
 
-          <TabScreen name="Rest" options={{ unmountOnBlur: true, tabBarVisible: false }}>
+          <TabScreen name="Rest" options={{ unmountOnBlur: true, headerShown: false }}>
             {(restaurant) => (
               <ErrorBoundary screenName="Restaurant">
                 <Restaurant {...restaurant} />
@@ -90,7 +90,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="Checkout" options={{ tabBarVisible: false }}>
+          <TabScreen name="Checkout" options={{ headerShown: false }}>
             {(checkout) => (
               <ErrorBoundary screenName="Checkout">
                 <CheckOut {...checkout} />
@@ -98,7 +98,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="CouponCheckout" options={{ tabBarVisible: false }}>
+          <TabScreen name="CouponCheckout" options={{ headerShown: false }}>
             {(checkout) => (
               <ErrorBoundary screenName="CouponCheckout">
                 <CouponCheckOut {...checkout} />
@@ -130,7 +130,7 @@ const Screens = (props) => {
 
           <TabScreen
             name="OrderSummary"
-            options={{ unmountOnBlur: true, tabBarVisible: false }}>
+            options={{ unmountOnBlur: true, headerShown: false }}>
             {(orderSummary) => (
               <ErrorBoundary screenName="OrderSummary">
                 <OrderSummary {...orderSummary} />
@@ -154,7 +154,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="CouponDetail" options={{ unmountOnBlur: true, tabBarVisible: false }}>
+          <TabScreen name="CouponDetail" options={{ unmountOnBlur: true, headerShown: false }}>
             {(coupondetails) => (
               <ErrorBoundary screenName="Coupondetails">
                 <CouponsView {...coupondetails} />

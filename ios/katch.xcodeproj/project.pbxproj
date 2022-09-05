@@ -14,6 +14,10 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BCA401AA6431EDA9CC24175C /* Pods_Katch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F6147A4049DA932A1BCD76 /* Pods_Katch.framework */; };
 		E80D0DBD9BF1B00CC9740C85 /* Pods_Katch_KatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B85F863EF82C7BAF9C064C /* Pods_Katch_KatchTests.framework */; };
+		FA490E2D28C0DA3C00EBE46D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FA490E2C28C0DA3C00EBE46D /* FirebaseAnalytics */; };
+		FA490E3128C0DA3C00EBE46D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA490E3028C0DA3C00EBE46D /* FirebaseAuth */; };
+		FA490E3328C0DA3C00EBE46D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA490E3228C0DA3C00EBE46D /* FirebaseFirestoreSwift */; };
+		FAF6FF7928C117F400C8145F /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FAF6FF7828C117F400C8145F /* FirebaseRemoteConfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,8 @@
 		70F6147A4049DA932A1BCD76 /* Pods_Katch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Katch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Katch/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FAF6FF7328C111BF00C8145F /* libswiftDarwin.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftDarwin.tbd; path = usr/lib/swift/libswiftDarwin.tbd; sourceTree = SDKROOT; };
+		FAF6FF7428C1148E00C8145F /* FirebaseCrashlytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCrashlytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE44F8436F7A47D66856CCC7 /* Pods-Katch-KatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Katch-KatchTests.release.xcconfig"; path = "Target Support Files/Pods-Katch-KatchTests/Pods-Katch-KatchTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA490E3328C0DA3C00EBE46D /* FirebaseFirestoreSwift in Frameworks */,
+				FA490E2D28C0DA3C00EBE46D /* FirebaseAnalytics in Frameworks */,
 				BCA401AA6431EDA9CC24175C /* Pods_Katch.framework in Frameworks */,
+				FA490E3128C0DA3C00EBE46D /* FirebaseAuth in Frameworks */,
+				FAF6FF7928C117F400C8145F /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAF6FF7428C1148E00C8145F /* FirebaseCrashlytics.framework */,
+				FAF6FF7328C111BF00C8145F /* libswiftDarwin.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				70F6147A4049DA932A1BCD76 /* Pods_Katch.framework */,
 				49B85F863EF82C7BAF9C064C /* Pods_Katch_KatchTests.framework */,
@@ -192,6 +204,12 @@
 			dependencies = (
 			);
 			name = Katch;
+			packageProductDependencies = (
+				FA490E2C28C0DA3C00EBE46D /* FirebaseAnalytics */,
+				FA490E3028C0DA3C00EBE46D /* FirebaseAuth */,
+				FA490E3228C0DA3C00EBE46D /* FirebaseFirestoreSwift */,
+				FAF6FF7828C117F400C8145F /* FirebaseRemoteConfig */,
+			);
 			productName = Katch;
 			productReference = 13B07F961A680F5B00A75B9A /* Katch.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +240,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				FA490E2B28C0DA3C00EBE46D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +633,8 @@
 					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
 					"\"$(PODS_TARGET_SRCROOT)/include/\"",
 					"$(SRCROOT)/**",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
 				);
 				INFOPLIST_FILE = Katch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,6 +759,9 @@
 					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
 					"\"$(PODS_TARGET_SRCROOT)/include/\"",
 					"$(SRCROOT)/**",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
 				);
 				INFOPLIST_FILE = Katch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -787,7 +813,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -809,8 +835,8 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -852,7 +878,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -867,8 +893,8 @@
 					"$(inherited)",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/lib/swift",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -908,6 +934,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA490E2B28C0DA3C00EBE46D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA490E2C28C0DA3C00EBE46D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA490E2B28C0DA3C00EBE46D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FA490E3028C0DA3C00EBE46D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA490E2B28C0DA3C00EBE46D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FA490E3228C0DA3C00EBE46D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA490E2B28C0DA3C00EBE46D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		FAF6FF7828C117F400C8145F /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA490E2B28C0DA3C00EBE46D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }

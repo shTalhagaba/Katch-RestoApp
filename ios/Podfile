@@ -39,6 +39,7 @@ target 'Katch' do
   # you should disable the next line.
   use_flipper!()
   use_frameworks! :linkage => :static
+  
 
   post_install do |installer|
     react_native_post_install(installer)

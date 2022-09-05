@@ -111,7 +111,7 @@
     "react-native-version-check": "^3.4.3",
     "react-native-web": "^0.18.8",
     "react-native-webview": "^11.23.0",
-    "react-redux": "^8.0.2",
+    "react-redux": "7.2.8",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "recompose": "^0.30.0",
     "redux": "^4.2.0",
