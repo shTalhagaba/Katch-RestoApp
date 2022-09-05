@@ -156,29 +156,29 @@ const OrderSummary = ({ navigation, route, labs,...props }) => {
 
   let animation = useRef(new Animated.Value(0.5)).current;
 
-  const mapHeight = Animated.interpolate(animation, {
-    inputRange: [0, 0.5, 1],
-    outputRange: [windowHeight, windowHeight / 1.8, windowHeight - 100],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const mapHeight = Animated.interpolate(animation, {
+  //   inputRange: [0, 0.5, 1],
+  //   outputRange: [windowHeight, windowHeight / 1.8, windowHeight - 100],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
-  const blurViewOpacity = Animated.interpolate(animation, {
-    inputRange: [0, 0.5],
-    outputRange: [1, 0],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const blurViewOpacity = Animated.interpolate(animation, {
+  //   inputRange: [0, 0.5],
+  //   outputRange: [1, 0],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
-  const topButtonY = Animated.interpolate(animation, {
-    inputRange: [0, 1],
-    outputRange: [-20, 0],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const topButtonY = Animated.interpolate(animation, {
+  //   inputRange: [0, 1],
+  //   outputRange: [-20, 0],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
-  const zIndexBlur = Animated.interpolate(animation, {
-    inputRange: [0, 0.1],
-    outputRange: [100, 0],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const zIndexBlur = Animated.interpolate(animation, {
+  //   inputRange: [0, 0.1],
+  //   outputRange: [100, 0],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
   const openMap = () => {
     try {
@@ -581,7 +581,7 @@ const OrderSummary = ({ navigation, route, labs,...props }) => {
                 top: 30,
                 left: 0,
                 zIndex: 101,
-                transform: [{ translateY: topButtonY }],
+                // transform: [{ translateY: topButtonY }],
               }}>
               <Touchable onPress={onBack}>
                 <IOIcon
@@ -601,7 +601,7 @@ const OrderSummary = ({ navigation, route, labs,...props }) => {
                     top: 30,
                     right: 0,
                     zIndex: 101,
-                    transform: [{ translateY: topButtonY }],
+                    // transform: [{ translateY: topButtonY }],
                   }}>
                   <Touchable onPress={openMap} disabled={!order.location}>
                     <FAIcon name="route" size={30} color="#4285F4" />
@@ -613,14 +613,14 @@ const OrderSummary = ({ navigation, route, labs,...props }) => {
               )}
             <Animated.View
               style={{
-                opacity: blurViewOpacity,
+                // opacity: blurViewOpacity,
                 flex: 1,
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 bottom: 0,
                 right: 0,
-                zIndex: zIndexBlur,
+                // zIndex: zIndexBlur,
               }}>
               <BlurView style={{ flex: 1 }} blurType="dark" blurAmount={100} />
             </Animated.View>
@@ -628,7 +628,8 @@ const OrderSummary = ({ navigation, route, labs,...props }) => {
             <Animated.View
               style={{
                 backgroundColor: '#fff',
-                height: mapHeight,
+                // height: mapHeight,
+                height:'100%'
               }}>
               {order &&
               order?.deliveryInfo?.deliveryTrackingLink &&

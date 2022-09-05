@@ -251,23 +251,23 @@ const Search = (props) => {
     : windowAndStatusBarHeight / 2;
   const closed = windowAndStatusBarHeight;
 
-  const mapHeight = Animated.interpolate(animation, {
-    inputRange: [0, 0.5, 1],
-    outputRange: [open, halfWay, closed],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const mapHeight = Animated.interpolate(animation, {
+  //   inputRange: [0, 0.5, 1],
+  //   outputRange: [open, halfWay, closed],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
-  const blurViewOpacity = Animated.interpolate(animation, {
-    inputRange: [0, 1],
-    outputRange: [1, 0.8],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const blurViewOpacity = Animated.interpolate(animation, {
+  //   inputRange: [0, 1],
+  //   outputRange: [1, 0.8],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
-  const zIndexBlur = Animated.interpolate(animation, {
-    inputRange: [0, 0.3],
-    outputRange: [100, 0],
-    extrapolate: Animated.Extrapolate.CLAMP,
-  });
+  // const zIndexBlur = Animated.interpolate(animation, {
+  //   inputRange: [0, 0.3],
+  //   outputRange: [100, 0],
+  //   extrapolate: Animated.Extrapolate.CLAMP,
+  // });
 
   const onFilterClicked = () => {
     setShowSearchFilter((_toggle) => !_toggle);
@@ -310,14 +310,14 @@ const Search = (props) => {
         {showDrawer && !storeInfo ? (
           <Animated.View
             style={{
-              opacity: blurViewOpacity,
+              // opacity: blurViewOpacity,
               flex: 1,
               position: 'absolute',
               top: 0,
               left: 0,
               bottom: 0,
               right: 0,
-              zIndex: zIndexBlur,
+              // zIndex: zIndexBlur,
             }}>
             <BlurView
               style={{ flex: 1 }}
@@ -336,7 +336,8 @@ const Search = (props) => {
         <Animated.View
           style={{
             backgroundColor: '#fff',
-            height: mapHeight, // : "100%",
+            // height: mapHeight, // : "100%",
+            height:'100%',
             minHeight: windowHeight / 2 + 150,
           }}>
           <MapHeader
