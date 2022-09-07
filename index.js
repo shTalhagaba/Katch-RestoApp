@@ -224,17 +224,10 @@ const AppHOC = () => {
     const middleware = requestMiddleware();
     const splitLink = createSplitLink();
     return new ApolloClient({
-      // Provide required constructor fields
       link: middleware.concat(splitLink),
       cache: new InMemoryCache({ addTypename: false }),
     });
-    // return new ApolloClient({
-    //   ur: middleware.concat(splitLink),
-    //   cache: new InMemoryCache({ addTypename: false }),
-    // });
   };
-
-  
 
   useEffect(() => {
     RNLocation.configure({

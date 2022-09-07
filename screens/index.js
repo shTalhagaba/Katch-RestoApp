@@ -37,7 +37,7 @@ const Screens = (props) => {
           <TabScreen
             name="Map"
             initialParams={{ searchString: '' }}
-            options={{ unmountOnBlur: false, headerShown: true }}>
+            options={{ unmountOnBlur: false, headerShown: false }}>
             {(map) => (
               <ErrorBoundary screenName="Map">
                 <Map {...map} />
@@ -48,7 +48,7 @@ const Screens = (props) => {
           <TabScreen
             name="Search"
             initialParams={{ searchString: '' }}
-            options={{ headerShown: true }}>
+            options={{ headerShown: false }}>
             {(search) => (
               <ErrorBoundary screenName="Search">
                 <Search {...search} />
