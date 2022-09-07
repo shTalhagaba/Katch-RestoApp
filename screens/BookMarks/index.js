@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 //3rd party
-import {useQuery} from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client'
 
 import {Viewport} from '@skele/components';
 import {connect} from 'react-redux';

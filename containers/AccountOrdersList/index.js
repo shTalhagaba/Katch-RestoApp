@@ -4,7 +4,7 @@ import {View, TouchableOpacity} from 'react-native';
 //3rd party
 import auth from '@react-native-firebase/auth';
 import MIIcon from 'react-native-vector-icons/MaterialIcons';
-import {useQuery, useMutation, useSubscription} from '@apollo/react-hooks';
+import { useQuery,useMutation,useSubscription } from '@apollo/client'
 
 //others
 import {RText, BoldText} from '../../GlobeStyle';

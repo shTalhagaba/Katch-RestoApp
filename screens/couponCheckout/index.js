@@ -1,10 +1,6 @@
 // @ts-nocheck
 //react
-import {
-  useApolloClient,
-  useLazyQuery,
-  useMutation,
-} from '@apollo/react-hooks';
+import { useMutation,useLazyQuery,useApolloClient } from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 //3rd party
 import { useFocusEffect, useIsFocused } from '@react-navigation/native';

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 //3rd party
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {useQuery} from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client'
 import IOIcon from 'react-native-vector-icons/Ionicons';
 
 //others

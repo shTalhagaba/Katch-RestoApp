@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useLazyQuery, useMutation, useQuery } from '@apollo/react-hooks';
+import { useMutation,useLazyQuery,useQuery } from '@apollo/client'
 import SplashScreen from 'react-native-splash-screen';
 
 import messaging from '@react-native-firebase/messaging';

@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { useLazyQuery, useQuery } from '@apollo/react-hooks';
+import { useLazyQuery,useQuery } from '@apollo/client'
 import reduxStore from '../Redux/configureStore';
 import {
   GET_TAGS,

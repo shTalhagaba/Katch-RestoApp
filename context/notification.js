@@ -10,7 +10,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 //others
 import { REGISTER_TOKEN } from '../components/GraphQL';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client'
 import { LogJsError } from '../components/AppReporting';
 import GS, { BoldText, normalizedFontSize, RText } from '../GlobeStyle';
 import { capitalizeFirstLetter } from '../components/Helpers';

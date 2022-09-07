@@ -18,7 +18,7 @@ import {
 } from 'react-native';
 
 //3rd party
-import {useMutation, useQuery} from '@apollo/react-hooks';
+import { useMutation,useQuery } from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 import IIcon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';

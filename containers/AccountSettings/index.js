@@ -24,7 +24,7 @@ import {
   hydrateUserWallet,
   resetUserState,
 } from '../../components/Redux/Actions/userActions';
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import { GET_USER_WALLET } from '../../components/GraphQL';
 
 const AccountSettings = ({

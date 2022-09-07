@@ -1,4 +1,4 @@
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client'
 import { useState } from 'react';
 import { REQ_OTP, VERIFY_OTP } from '../../components/GraphQL';
 

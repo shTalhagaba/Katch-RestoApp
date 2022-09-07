@@ -1,4 +1,4 @@
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client'
 import React, { useEffect } from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';

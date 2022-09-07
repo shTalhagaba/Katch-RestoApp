@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 //3rd party
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 import ADIcon from 'react-native-vector-icons/AntDesign';
 

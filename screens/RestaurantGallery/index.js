@@ -1,6 +1,6 @@
 //react
 //3rd party
-import { useMutation, useQuery } from '@apollo/react-hooks';
+import { useQuery ,useMutation} from '@apollo/client'
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import {
   Animated,

@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { useLazyQuery, useMutation, useQuery } from '@apollo/react-hooks';
+import { useMutation ,useLazyQuery,useQuery} from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 import { default as Lottie, default as LottieView } from 'lottie-react-native';
 import { MFSettings, MFTheme } from 'myfatoorah-reactnative';

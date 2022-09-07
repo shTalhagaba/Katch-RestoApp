@@ -4,7 +4,7 @@ import {TouchableOpacity, View} from 'react-native';
 //3rd party
 import auth from '@react-native-firebase/auth';
 import {connect} from 'react-redux';
-import {useLazyQuery, useSubscription} from '@apollo/react-hooks';
+import { useLazyQuery, useSubscription } from '@apollo/client'
 
 //others
 import {GET_USER_ORDERS, ORDER_STATUS_CHANGE} from '../../components/GraphQL';

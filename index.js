@@ -1,16 +1,23 @@
 import { onError } from '@apollo/client/link/error';
-import { ApolloProvider } from '@apollo/react-hooks';
+// import { ApolloProvider } from '@apollo/react-hooks';
 import NetInfo from '@react-native-community/netinfo';
 //3rd party
 import auth from '@react-native-firebase/auth';
 import messaging from '@react-native-firebase/messaging';
-import { ApolloLink, split } from 'apollo-boost';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloClient } from '@apollo/client';
-import { setContext } from 'apollo-link-context';
-import { HttpLink } from 'apollo-link-http';
-import { WebSocketLink } from 'apollo-link-ws';
-import { getMainDefinition } from 'apollo-utilities';
+// import {  split } from 'apollo-boost';
+// import { InMemoryCache } from 'apollo-cache-inmemory';
+import { split,ApolloLink,HttpLink ,ApolloProvider,ApolloClient,InMemoryCache,} from '@apollo/client';
+// import {  InMemoryCache } from '@apollo/client/cache';
+// import { ApolloClient } from '@apollo/client/core';
+// import { setContext } from 'apollo-link-context';
+// import { setContext } from '@apollo/link-context';
+import { setContext } from "@apollo/client/link/context";
+// import { HttpLink } from 'apollo-link-http';
+// import { WebSocketLink } from 'apollo-link-ws';
+import { WebSocketLink } from '@apollo/link-ws';
+// import { WebSocketLink} from '@apollo/client/link/ws'
+// import { getMainDefinition } from 'apollo-utilities';
+import { getMainDefinition } from '@apollo/client/utilities';
 //react
 import React, { useEffect, useState } from 'react';
 import { AppRegistry, Platform, UIManager } from 'react-native';
@@ -217,10 +224,17 @@ const AppHOC = () => {
     const middleware = requestMiddleware();
     const splitLink = createSplitLink();
     return new ApolloClient({
+      // Provide required constructor fields
       link: middleware.concat(splitLink),
       cache: new InMemoryCache({ addTypename: false }),
     });
+    // return new ApolloClient({
+    //   ur: middleware.concat(splitLink),
+    //   cache: new InMemoryCache({ addTypename: false }),
+    // });
   };
+
+  
 
   useEffect(() => {
     RNLocation.configure({

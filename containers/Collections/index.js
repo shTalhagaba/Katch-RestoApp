@@ -5,7 +5,7 @@ import { RES } from '../../assets/images';
 import Loading, { SignalLoading } from './loading';
 import { Viewport } from '@skele/components';
 import { useNavigation } from '@react-navigation/native';
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import { GET_STORES_COLLECTION_ID } from '../../components/GraphQL';
 import Header from './Header';
 

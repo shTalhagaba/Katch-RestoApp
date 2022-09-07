@@ -1,4 +1,5 @@
-import { useMutation } from '@apollo/react-hooks';
+
+import { useMutation } from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 import passwordStrength from 'check-password-strength';
 import isValidEmail from 'is-valid-email';

@@ -1,5 +1,5 @@
 //react
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import moment from 'moment';
 import React, { memo, useEffect, useState } from 'react';
 import {

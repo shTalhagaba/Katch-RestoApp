@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import auth from '@react-native-firebase/auth';
-import {useMutation} from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client'
 import {GET_USER_EMAIL} from '../../../components/GraphQL/mutations';
 import {formatPhoneNumber} from '../authHelper';
 import IOIcon from 'react-native-vector-icons/Ionicons';

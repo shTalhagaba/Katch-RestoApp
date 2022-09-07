@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 //3rd party
-import { useLazyQuery, useMutation } from '@apollo/react-hooks';
+import { useLazyQuery,useMutation } from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';

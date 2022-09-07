@@ -8,7 +8,7 @@ import {
   Platform,
 } from 'react-native';
 //3rd party
-import { useLazyQuery, useQuery } from '@apollo/react-hooks';
+import { useQuery,useLazyQuery } from '@apollo/client'
 import Animated, { Easing } from 'react-native-reanimated';
 import loDebounce from 'lodash.debounce';
 import { request, PERMISSIONS, openSettings } from 'react-native-permissions';

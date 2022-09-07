@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 //react
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import { Viewport } from '@skele/components';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';

@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client'
 import { Viewport } from '@skele/components';
 import React, { useState } from 'react';
 import { ImageBackground, RefreshControl, View } from 'react-native';

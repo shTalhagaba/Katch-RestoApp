@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import { useNavigation } from '@react-navigation/native';
 import { Viewport } from '@skele/components';
 import React, { memo, useEffect, useState } from 'react';

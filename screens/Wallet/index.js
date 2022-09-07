@@ -1,4 +1,5 @@
-import { useLazyQuery } from '@apollo/react-hooks';
+
+import { useLazyQuery } from '@apollo/client'
 import { useNavigation } from '@react-navigation/native';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';

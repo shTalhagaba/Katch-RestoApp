@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, LayoutAnimation } from 'react-native';
 
 //3rd party
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import Lottie from 'lottie-react-native';
 //others
 import { GET_ESTIMATED_TIME } from '../../../components/GraphQL';

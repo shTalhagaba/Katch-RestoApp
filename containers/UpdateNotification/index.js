@@ -1,5 +1,5 @@
 //3rd party
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client'
 import compareVersions from 'compare-versions';
 import React, { Fragment, useEffect, useState } from 'react';
 import {

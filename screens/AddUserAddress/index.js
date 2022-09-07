@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 // @ts-nocheck
-import { useMutation } from '@apollo/react-hooks';
+
+import { useMutation } from '@apollo/client'
 import { insidePolygon } from 'geolocation-utils';
 import React, { useEffect, useRef, useState } from 'react';
 import {

@@ -7,7 +7,7 @@ import {
 
 //3rd party
 import {AirbnbRating} from 'react-native-ratings';
-import {useMutation, useLazyQuery} from '@apollo/react-hooks';
+import { useLazyQuery,useMutation } from '@apollo/client'
 import auth from '@react-native-firebase/auth';
 import Lottie from 'lottie-react-native';
 

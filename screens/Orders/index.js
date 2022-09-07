@@ -12,7 +12,7 @@ import {
 import Header from '../../components/AccountHeader';
 
 //3rd party
-import {useQuery, useSubscription} from '@apollo/react-hooks';
+import { useQuery,useSubscription } from '@apollo/client'
 import {connect} from 'react-redux';
 import auth from '@react-native-firebase/auth';
 

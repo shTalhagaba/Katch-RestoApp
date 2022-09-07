@@ -2,7 +2,7 @@ import React, {useRef, useState, useEffect} from 'react';
 import {View, Animated, StatusBar ,ScrollView, SafeAreaView} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-import {useLazyQuery} from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import {Viewport} from '@skele/components';
 
 import {GET_STORES_COLLECTION_ID} from '../../components/GraphQL';

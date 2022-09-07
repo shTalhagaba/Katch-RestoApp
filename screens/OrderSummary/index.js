@@ -3,7 +3,7 @@
 /* eslint-disable react-native/no-color-literals */
 /* eslint-disable react-native/no-inline-styles */
 
-import { useMutation, useQuery, useSubscription } from '@apollo/react-hooks';
+import { useMutation,useQuery,useSubscription } from '@apollo/client'
 import { BlurView } from '@react-native-community/blur';
 //3rd party
 import auth from '@react-native-firebase/auth';

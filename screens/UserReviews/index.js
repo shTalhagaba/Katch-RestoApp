@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {View, ScrollView, SafeAreaView, RefreshControl} from 'react-native';
 
 //3rd party
-import {useQuery, useMutation} from '@apollo/react-hooks';
+import { useQuery ,useMutation} from '@apollo/client'
 import {Viewport} from '@skele/components';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import auth from '@react-native-firebase/auth';

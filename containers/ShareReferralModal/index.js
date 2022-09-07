@@ -19,7 +19,7 @@ import RNFetchBlob from "rn-fetch-blob";
 import ClipBoard from '@react-native-community/clipboard';
 import GS, { RText, BoldText, normalizedFontSize } from '../../GlobeStyle';
 import { FACEBOOK, WHATSAPP, COPY_URL } from '../../assets/images';
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import { GET_USER_REFERRAL_CODE } from '../../components/GraphQL/User/queries';
 import FIcon from 'react-native-vector-icons/Feather';
 import EditRefCodeDialog from '../../containers/EditRefCodeDialog';

@@ -10,7 +10,7 @@ import timeDiff from 'timediff';
 import { distanceTo, insideBoundingBox } from 'geolocation-utils';
 import sort from 'fast-sort';
 
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery,useMutation } from '@apollo/client'
 import {
   GET_APP_PROPERTIES,
   ADD_BOOKMARK,

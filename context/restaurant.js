@@ -1,4 +1,4 @@
-import { useLazyQuery, useQuery } from '@apollo/react-hooks';
+import { useLazyQuery,useQuery } from '@apollo/client'
 import React, { useEffect, useState } from 'react';
 import { Modal } from 'react-native';
 //others

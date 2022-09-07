@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-color-literals */
 /* eslint-disable react-native/no-inline-styles */
 //3rd party
-import { useLazyQuery } from '@apollo/react-hooks';
+import { useLazyQuery } from '@apollo/client'
 import { BlurView } from '@react-native-community/blur';
 import { Viewport } from '@skele/components';
 import sort from 'fast-sort';

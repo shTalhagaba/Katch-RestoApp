@@ -12,7 +12,7 @@ import {
 import { useIsFocused } from '@react-navigation/native';
 
 //3rd party
-import { useLazyQuery, useMutation } from '@apollo/react-hooks';
+import { useLazyQuery,useMutation } from '@apollo/client'
 import { connect } from 'react-redux';
 import EIcon from 'react-native-vector-icons/Entypo';
 

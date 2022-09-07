@@ -7,7 +7,7 @@ import { View, TouchableOpacity, Keyboard } from 'react-native';
 import { RText, BoldText } from '../../GlobeStyle';
 
 import { TextInput } from 'react-native-gesture-handler';
-import { useApolloClient, useMutation } from '@apollo/react-hooks';
+import { useApolloClient,useMutation } from '@apollo/client'
 import {
   IS_REFERRAL_AVAILABLE,
   UPDATE_USER_REFERRAL_CODE,

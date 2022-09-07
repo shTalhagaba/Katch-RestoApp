@@ -1,4 +1,4 @@
-import { useApolloClient, useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client'
 import { default as Lottie } from 'lottie-react-native';
 import auth from '@react-native-firebase/auth';
 import React, { useContext, useState } from 'react';

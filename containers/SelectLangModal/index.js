@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from '@apollo/react-hooks';
+import { useMutation,useQuery } from '@apollo/client'
 import React, { useEffect, useState } from 'react';
 import { View, TouchableOpacity, Image } from 'react-native';
 import { setLocalStorage } from '../../components/Redux/Actions/appActions';

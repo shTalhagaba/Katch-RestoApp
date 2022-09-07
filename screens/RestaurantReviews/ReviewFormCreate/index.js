@@ -11,11 +11,10 @@ import {
 } from 'react-native';
 
 //3rd party
-import {useMutation} from '@apollo/react-hooks';
+import { useMutation,useQuery } from '@apollo/client'
 import ImagePicker from 'react-native-image-crop-picker';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import {useQuery} from '@apollo/react-hooks';
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
 //others

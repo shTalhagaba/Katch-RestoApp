@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 //3rd party
-import {useMutation, useQuery} from '@apollo/react-hooks';
+import { useQuery,useMutation } from '@apollo/client'
 import ImagePicker from 'react-native-image-crop-picker';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
