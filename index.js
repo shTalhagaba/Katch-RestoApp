@@ -36,7 +36,7 @@ import 'react-native-gesture-handler';
 import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 import RNLocation from 'react-native-location';
 //others
-import Orientation from 'react-native-orientation';
+// import Orientation from 'react-native-orientation';
 import VersionCheck from 'react-native-version-check';
 import { Provider, useStore } from 'react-redux';
 import { SubscriptionClient } from 'subscriptions-transport-ws';
@@ -229,22 +229,22 @@ const AppHOC = () => {
     });
   };
 
-  useEffect(() => {
-    RNLocation.configure({
-      desiredAccuracy: {
-        ios: 'best',
-        android: 'balancedPowerAccuracy',
-      },
-      interval: 1000,
-      maxWaitTime: 1000,
-    });
+//   useEffect(() => {
+//     RNLocation.configure({
+//       desiredAccuracy: {
+//         ios: 'best',
+//         android: 'balancedPowerAccuracy',
+//       },
+//       interval: 1000,
+//       maxWaitTime: 1000,
+//     });
 
-    Orientation.lockToPortrait();
+//     Orientation.lockToPortrait();
 
-    return () => {
-      Orientation.unlockAllOrientations();
-    };
-  }, []);
+//     return () => {
+//       Orientation.unlockAllOrientations();
+//     };
+//   }, []);
 
   useEffect(() => {
     const unsubscribeConnectivity = NetInfo.addEventListener(

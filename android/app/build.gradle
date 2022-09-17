@@ -295,7 +295,7 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:17.0.0"
     implementation project(path: ":@react-native-firebase_analytics")
 
-    implementation project(':react-native-orientation')
+    // implementation project(':react-native-orientation')
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
