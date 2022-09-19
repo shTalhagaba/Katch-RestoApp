@@ -1,0 +1,294 @@
+diff --git a/node_modules/react-native-reanimated/android/build.gradle b/node_modules/react-native-reanimated/android/build.gradle
+index 6b5e3fc..8951861 100644
+--- a/node_modules/react-native-reanimated/android/build.gradle
++++ b/node_modules/react-native-reanimated/android/build.gradle
+@@ -281,7 +281,7 @@ android {
+     externalNativeBuild {
+         cmake {
+             path "CMakeLists.txt"
+-            version "3.18.1"
++            version "3.22.1"
+         }
+     }
+     lintOptions {
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g.json b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g.json
+new file mode 100644
+index 0000000..e542dae
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g.json
+@@ -0,0 +1,14 @@
++{
++  "allAbis": [
++    "armeabi-v7a",
++    "arm64-v8a",
++    "x86",
++    "x86_64"
++  ],
++  "validAbis": [
++    "ARMEABI_V7A",
++    "ARM64_V8A",
++    "X86",
++    "X86_64"
++  ]
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g.log b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g.log
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g.log
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g_key.json b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g_key.json
+new file mode 100644
+index 0000000..a444d81
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_6uyf2c2g_key.json
+@@ -0,0 +1,23 @@
++{
++  "ndkHandlerSupportedAbis": [
++    "ARMEABI_V7A",
++    "ARM64_V8A",
++    "X86",
++    "X86_64"
++  ],
++  "ndkHandlerDefaultAbis": [
++    "ARMEABI_V7A",
++    "ARM64_V8A",
++    "X86",
++    "X86_64"
++  ],
++  "externalNativeBuildAbiFilters": [
++    "x86_64",
++    "x86",
++    "armeabi-v7a",
++    "arm64-v8a"
++  ],
++  "ndkConfigAbiFilters": [],
++  "splitsFilterAbis": [],
++  "ideBuildOnlyTargetAbi": true
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv.json b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv.json
+new file mode 100644
+index 0000000..88f00b0
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv.json
+@@ -0,0 +1,11 @@
++{
++  "allAbis": [
++    "armeabi-v7a",
++    "arm64-v8a",
++    "x86",
++    "x86_64"
++  ],
++  "validAbis": [
++    "ARM64_V8A"
++  ]
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv.log b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv.log
+new file mode 100644
+index 0000000..03eb706
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv.log
+@@ -0,0 +1,16 @@
++[
++  {
++    "level_": 0,
++    "message_": "ABIs [arm64-v8a,armeabi-v7a,armeabi] set by \u0027android.injected.build.abi\u0027 gradle flag contained \u0027ARMEABI\u0027 not targeted by this project.",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": -1588291468
++  }
++]
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv_key.json b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv_key.json
+new file mode 100644
+index 0000000..c4e15c4
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/abi_configuration_m4n2e4wv_key.json
+@@ -0,0 +1,24 @@
++{
++  "ndkHandlerSupportedAbis": [
++    "ARMEABI_V7A",
++    "ARM64_V8A",
++    "X86",
++    "X86_64"
++  ],
++  "ndkHandlerDefaultAbis": [
++    "ARMEABI_V7A",
++    "ARM64_V8A",
++    "X86",
++    "X86_64"
++  ],
++  "externalNativeBuildAbiFilters": [
++    "x86_64",
++    "x86",
++    "armeabi-v7a",
++    "arm64-v8a"
++  ],
++  "ndkConfigAbiFilters": [],
++  "splitsFilterAbis": [],
++  "ideBuildOnlyTargetAbi": true,
++  "ideBuildTargetAbi": "arm64-v8a,armeabi-v7a,armeabi"
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/create_cxx_tasks_602_timing.txt b/node_modules/react-native-reanimated/android/build/intermediates/cxx/create_cxx_tasks_602_timing.txt
+new file mode 100644
+index 0000000..8f2d676
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/create_cxx_tasks_602_timing.txt
+@@ -0,0 +1,6 @@
++# C/C++ build system timings
++create_cxx_tasks
++  create-initial-cxx-model 47ms
++  [gap of 28ms]
++create_cxx_tasks completed in 75ms
++
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/create_cxx_tasks_674_timing.txt b/node_modules/react-native-reanimated/android/build/intermediates/cxx/create_cxx_tasks_674_timing.txt
+new file mode 100644
+index 0000000..824aa85
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/create_cxx_tasks_674_timing.txt
+@@ -0,0 +1,7 @@
++# C/C++ build system timings
++
++# C/C++ build system timings
++create_cxx_tasks
++  create-initial-cxx-model 32ms
++create_cxx_tasks completed in 33ms
++
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5.json b/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5.json
+new file mode 100644
+index 0000000..cfeffbc
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5.json
+@@ -0,0 +1,11 @@
++{
++  "ndk": "/Users/talhasadiq/Library/Android/sdk/ndk/21.4.7075529",
++  "revision": {
++    "mMajor": 21,
++    "mMinor": 4,
++    "mMicro": 7075529,
++    "mPreview": 0,
++    "mPrecision": "MICRO",
++    "mPreviewSeparator": " "
++  }
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5.log b/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5.log
+new file mode 100644
+index 0000000..feed745
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5.log
+@@ -0,0 +1,86 @@
++[
++  {
++    "level_": 0,
++    "message_": "android.ndkVersion from module build.gradle is [not set]",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": -746256850
++  },
++  {
++    "level_": 0,
++    "message_": "android.ndkPath from module build.gradle is not set",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": 45931253
++  },
++  {
++    "level_": 0,
++    "message_": "ndk.dir in local.properties is not set",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": 750392446
++  },
++  {
++    "level_": 0,
++    "message_": "Not considering ANDROID_NDK_HOME because support was removed after deprecation period.",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": -1681760780
++  },
++  {
++    "level_": 0,
++    "message_": "sdkFolder is /Users/talhasadiq/Library/Android/sdk",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": 698994677
++  },
++  {
++    "level_": 0,
++    "message_": "Because no explicit NDK was requested, the default version [21.4.7075529] for this Android Gradle Plugin will be used",
++    "file_": "",
++    "tag_": "",
++    "diagnosticCode_": 0,
++    "memoizedIsInitialized": 1,
++    "unknownFields": {
++      "fields": {},
++      "fieldsDescending": {}
++    },
++    "memoizedSize": -1,
++    "memoizedHashCode": 2056497153
++  }
++]
+\ No newline at end of file
+diff --git a/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5_key.json b/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5_key.json
+new file mode 100644
+index 0000000..1588316
+--- /dev/null
++++ b/node_modules/react-native-reanimated/android/build/intermediates/cxx/ndk_locator_record_970316y5_key.json
+@@ -0,0 +1,7 @@
++{
++  "sdkFolder": "/Users/talhasadiq/Library/Android/sdk",
++  "sideBySideNdkFolderNames": [
++    "21.4.7075529",
++    "21.1.6352462"
++  ]
++}
+\ No newline at end of file

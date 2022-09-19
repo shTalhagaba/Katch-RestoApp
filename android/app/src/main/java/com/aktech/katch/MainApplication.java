@@ -6,7 +6,6 @@ import android.content.Context;
 import com.aktech.katch.native_modules.ImageBulkLoaderPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
-import com.airbnb.android.react.maps.MapsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.masteratul.exceptionhandler.ReactNativeExceptionHandlerPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
