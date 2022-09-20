@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
+  BackHandler,
 } from 'react-native';
 
 //3rd party
@@ -32,6 +33,7 @@ import { ReviewStar } from '../../assets/Lottie';
 
 const Account = ({ navigation, tabProps, marketingData }) => {
   const { setScreen } = tabProps;
+
   if (auth().currentUser) {
     const [route, setRoute] = useState('');
     const [showThanksMessage, setShowThanksMessage] = useState(false);

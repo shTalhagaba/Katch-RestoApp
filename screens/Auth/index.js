@@ -20,7 +20,7 @@ const Auth = ({navigation,route}) => {
     case 'Reset':
       return  <Reset setScreen={setScreen}/>
     default:
-      return <Account routeParams={route.params} navigation={navigation} setScreen={setScreen}/>
+      return <Account routeParams={route.params} navigation={navigation} setScreen={setScreen} />
   }
 };
 

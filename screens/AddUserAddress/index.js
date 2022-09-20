@@ -639,7 +639,7 @@ const BackButton = (props) => {
       <TouchableOpacity
         onPress={() => {
           if (docked) {
-            navigation.goBack();
+            navigation.goBack()
             if (
               tabProps &&
               tabProps.routeParams &&

@@ -10,7 +10,8 @@ import {
   StatusBar,
   ScrollView,
   FlatList,
-  RefreshControl,
+  BackHandler,
+  Alert
 } from 'react-native';
 
 //3rd party
@@ -40,6 +41,29 @@ const LandingGreeting = (props) => {
   const authUser = auth().currentUser;
   const [state, setState] = useState(false);
   const [permission, setPermission] = useState(null);
+
+  function handleBackButtonClick() {
+    Alert.alert(
+      'Warning',
+      'Are you sure to want to exit app?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel'
+        },
+        { text: 'OK', onPress: () => BackHandler.exitApp() }
+      ],
+    );
+    return true
+  }
+
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', handleBackButtonClick);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', handleBackButtonClick);
+    };
+  }, []);
 
   useEffect(() => {
     RNLocation.checkPermission({

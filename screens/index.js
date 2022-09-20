@@ -33,7 +33,7 @@ const Screens = (props) => {
           translucent={true}
         />
 
-        <TabNavigator initialRouteName="Home">
+        <TabNavigator initialRouteName="Home" headerShown={false}>
           <TabScreen
             name="Map"
             initialParams={{ searchString: '' }}
@@ -120,7 +120,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="Orders" options={{ unmountOnBlur: true }}>
+          <TabScreen name="Orders" options={{ unmountOnBlur: true,headerShown: false }}>
             {(orders) => (
               <ErrorBoundary screenName="Orders">
                 <Orders {...orders} />
@@ -138,7 +138,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="Promos" options={{ unmountOnBlur: true }}>
+          <TabScreen name="Promos" options={{ unmountOnBlur: true, headerShown: false }}>
             {(promos) => (
               <ErrorBoundary screenName="OrderSummary">
                 <Promos {...promos} />
@@ -162,7 +162,7 @@ const Screens = (props) => {
             )}
           </TabScreen>
 
-          <TabScreen name="UserCoupons" options={{ unmountOnBlur: true }}>
+          <TabScreen name="UserCoupons" options={{ unmountOnBlur: true, headerShown: false }}>
             {(coupondetails) => (
               <ErrorBoundary screenName="UserCoupons">
                 <UserCouponsView {...coupondetails} />

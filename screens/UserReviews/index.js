@@ -261,7 +261,7 @@ const UserReviews = ({navigation, route, ...props}) => {
         paddingTop: statusBarHeight,
         backgroundColor: '#fff',
       }}>
-      <Header goBack={() => navigation.goBack()} title="My Reviews" />
+      <Header goBack={() =>navigation.goBack()} title="My Reviews" />
       <Viewport.Tracker>
         <ScrollView
           scrollEventThrottle={16}

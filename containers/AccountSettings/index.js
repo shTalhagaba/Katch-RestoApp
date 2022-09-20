@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-color-literals */
 /* eslint-disable react-native/no-inline-styles */
 import React, { useEffect } from 'react';
-import { View, TouchableOpacity, Image } from 'react-native';
+import { View, TouchableOpacity, Image, BackHandler } from 'react-native';
 
 //3rd party
 import auth from '@react-native-firebase/auth';
@@ -59,6 +59,18 @@ const AccountSettings = ({
   useEffect(() => {
     getUserWallet();
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const onBack = () => {
+    navigation.goBack();
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', onBack);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', onBack);
+    };
   }, []);
 
   return (

@@ -260,7 +260,6 @@ const Search = (props) => {
 
   useEffect(() => {
     BackHandler.addEventListener('hardwareBackPress', onBack);
-
     return () => BackHandler.removeEventListener('hardwareBackPress', onBack);
   }, [showSearchResults]);
 

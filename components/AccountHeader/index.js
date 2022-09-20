@@ -1,7 +1,7 @@
 import auth from '@react-native-firebase/auth';
-import { useNavigation } from '@react-navigation/native';
-import React from 'react';
-import { Dimensions, Image, View } from 'react-native';
+import { StackActions, useNavigation } from '@react-navigation/native';
+import React ,{useEffect} from 'react';
+import { BackHandler, Dimensions, Image, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import IOIcon from 'react-native-vector-icons/Ionicons';
 import styled from 'styled-components';
@@ -22,6 +22,19 @@ const AccountHeader = ({
   const user = auth().currentUser;
   const navigation = useNavigation();
   let deviceWidth = Dimensions.get('window').width;
+  
+  const onBack = () => {
+    navigation.dispatch(StackActions.popToTop())    
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', onBack);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', onBack);
+    };
+  }, []);
+
   return (
     <Header style={style}>
       <Touchable onPress={goBack} style={style?.backButton}>
