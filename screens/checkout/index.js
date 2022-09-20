@@ -13,6 +13,7 @@ import {
   View,
   TouchableOpacity,
   Image,
+  BackHandler
 } from 'react-native';
 import { connect } from 'react-redux';
 import { minus } from 'safe-float';
@@ -174,6 +175,18 @@ const CheckOut = ({ navigation, route, ...props }) => {
   const [viewAddressListModal, setViewAddressListModal] = useState(false);
   const apolloClient = useApolloClient();
   const [createOrder] = useMutation(CREATE_ORDER);
+
+  const onBack = () => {
+    navigation.navigate('Cart');  
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', onBack);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', onBack);
+    };
+  }, []);
 
   useEffect(() => {
     setCart({
@@ -615,7 +628,10 @@ const CheckOut = ({ navigation, route, ...props }) => {
     storeInfo && (
       <SafeAreaView style={styles.root}>
         <View style={styles.rootWrapper}>
-          <Header shopName={storeName} goBack={() => navigation.goBack()} />
+          <Header shopName={storeName} 
+          goBack={()=>onBack()}
+          // goBack={() => navigation.goBack()}
+           />
           <Animated.ScrollView style={styles.scrollView}>
             <ServicesButtons
               orderMethods={getAvailableOrderMethods()}

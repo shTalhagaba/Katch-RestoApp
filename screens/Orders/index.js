@@ -8,6 +8,7 @@ import {
   FlatList,
   Platform,
   SafeAreaView,
+  BackHandler
 } from 'react-native';
 import Header from '../../components/AccountHeader';
 
@@ -58,6 +59,19 @@ const Orders = ({navigation, route, ...props}) => {
     inputRange: [0, Math.ceil(windowWidth / 4), Math.ceil(windowWidth / 2)],
     outputRange: [0, 0.5, 1],
   });
+
+
+  const onBack = () => {
+    navigation.navigate('Account');  
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', onBack);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', onBack);
+    };
+  }, []);
 
   useEffect(() => {
     if (subscription.data) {
@@ -128,7 +142,7 @@ const Orders = ({navigation, route, ...props}) => {
               flexDirection: 'row',
               backgroundColor: '#fff',
             }}>
-            <Header goBack={() => navigation.goBack()} title="My Orders" />
+            <Header goBack={() => onBack()} title="My Orders" />
           </View>
           <View
             style={{

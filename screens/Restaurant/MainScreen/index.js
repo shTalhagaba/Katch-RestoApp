@@ -1,6 +1,7 @@
 //react
-import React, { useRef, useState } from 'react';
-import { Animated, View } from 'react-native';
+import { StackActions } from '@react-navigation/native';
+import React, { useEffect, useRef, useState } from 'react';
+import { Animated, View,BackHandler } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Menu, { MenuButton } from '../../../containers/Menu';
 import ProductsList from '../../../containers/RestProductList';
@@ -29,6 +30,20 @@ const Rest = (props) => {
 
   const [showMenu, setShowMenu] = useState(false);
   const [showSearchProductModal, setShowSearchProductModal] = useState(false);
+
+  const onBack = () => {
+    navigation.navigate('Search');  
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', onBack);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', onBack);
+    };
+  }, []);
+
+
   const insets = useSafeAreaInsets();
   const statusBarHeight = insets.top;
   let headerTransition = translateY.interpolate({
@@ -105,7 +120,7 @@ const Rest = (props) => {
         headersIndex={headersIndex}
         refresh={refresh}
         productList={productList}
-        storeInfo={storeInfo}
+        storeInfo={storeInfo} 
         translateY={translateY}
         setCartItems={setCartItems}
       />

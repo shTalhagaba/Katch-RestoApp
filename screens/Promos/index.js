@@ -1,11 +1,12 @@
 //react
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import {
   View,
   Platform,
   StatusBar,
   SafeAreaView,
   RefreshControl,
+  BackHandler
 } from 'react-native';
 
 //3rd party
@@ -28,6 +29,18 @@ const Promos = ({ navigation, route, ...props }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isFetchMore, setIsFetchMore] = useState(false);
+
+  const onBack = () => {
+    navigation.navigate('Home');  
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', onBack);
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', onBack);
+    };
+  }, []);
 
   const { refetch, fetchMore } = useQuery(GET_ALL_PROMO_CODES, {
     variables: {
@@ -107,7 +120,8 @@ const Promos = ({ navigation, route, ...props }) => {
           flex: 1,
         }}>
         <Header
-          goBack={() => navigation.goBack()}
+          // goBack={() => navigation.goBack()}
+          goBack={()=> onBack()}
           title={route.params.headerTitle.split('\n').join(' ').toUpperCase()}
         />
 
