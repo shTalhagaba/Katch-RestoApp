@@ -14,6 +14,7 @@ import AddUserAddress from '../../screens/AddUserAddress';
 import Wallet from '../../screens/Wallet';
 import ErrorBoundary from '../../containers/EB';
 import CouponsView from '../../screens/Coupons';
+import UserCouponsView from '../../screens/UserCoupon';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -77,6 +78,13 @@ export const Account = (props) => {
             <Wallet {...props} />
           </ErrorBoundary>
         )}
+      </Screen>
+      <Screen name="UserCoupons" options={{headerShown: false }}>
+            {(coupondetails) => (
+              <ErrorBoundary screenName="UserCoupons">
+                <UserCouponsView {...coupondetails} />
+              </ErrorBoundary>
+            )}
       </Screen>
     </Navigator>
   );
