@@ -47,18 +47,14 @@ const Rest = (props) => {
   const insets = useSafeAreaInsets();
   const statusBarHeight = insets.top;
   let headerTransition = translateY.interpolate({
-    inputRange: [110, 172],
-    outputRange: [2 , 2],
+    inputRange: [171, 342],
+    outputRange: [0, 1],
     extrapolate: 'clamp',
-
-    // inputRange: [100, 371],
-    // outputRange: [statusBarHeight, 1],
-    // extrapolate: 'clamp',
   });
 
   let menuTransformY = translateY.interpolate({
-    inputRange:  [100, 172],
-    outputRange: [2,  1],
+    inputRange: [171, 342],
+    outputRange: [0, 0],
     extrapolate: 'clamp',
   });
 
@@ -75,18 +71,50 @@ const Rest = (props) => {
   });
 
   let headerSpace = translateY.interpolate({
-  inputRange:  [0, 72],
-    outputRange: [statusBarHeight - 23, statusBarHeight - 8],
+    inputRange: [171, 342],
+    outputRange: [-statusBarHeight, statusBarHeight],
     extrapolate: 'clamp',
-
-    // inputRange:  [0, 72],
-    // outputRange: [statusBarHeight -3, statusBarHeight - 25],
-    // extrapolate: 'clamp',
   });
+  // let headerTransition = translateY.interpolate({
+  //   inputRange: [110, 172],
+  //   outputRange: [2 , 2],
+  //   extrapolate: 'clamp',
+
+  //   // inputRange: [100, 371],
+  //   // outputRange: [statusBarHeight, 1],
+  //   // extrapolate: 'clamp',
+  // });
+
+  // let menuTransformY = translateY.interpolate({
+  //   inputRange:  [100, 172],
+  //   outputRange: [2,  1],
+  //   extrapolate: 'clamp',
+  // });
+
+  // const opacity = translateY.interpolate({
+  //   inputRange: [0, 171],
+  //   outputRange: [0, 1],
+  //   extrapolate: 'clamp',
+  // });
+
+  // const opacity2 = translateY.interpolate({
+  //   inputRange: [0, 171],
+  //   outputRange: [1, 0],
+  //   extrapolate: 'clamp',
+  // });
+
+  // let headerSpace = translateY.interpolate({
+  // inputRange:  [0, 72],
+  //   outputRange: [statusBarHeight - 23, statusBarHeight - 8],
+  //   extrapolate: 'clamp',
+
+  //   // inputRange:  [0, 72],
+  //   // outputRange: [statusBarHeight -3, statusBarHeight - 25],
+  //   // extrapolate: 'clamp',
+  // });
 
   return (
     <View style={style.menuContainer}>
-      <StatusBar translucent={false} />
       <Animated.View
         style={{
           position: 'absolute',
@@ -122,12 +150,14 @@ const Rest = (props) => {
           opacity={opacity}
           navigation={navigation}
         /> */}
+        {storeInfo ? (
       <RestHeader
         headerSpace={headerSpace}
         opacity={headerTransition}
         navigation={navigation}
         storeInfo={storeInfo}
-      />
+      />)
+      : null }
       <ProductsList
         promoCodes={promoCodes}
         navigation={navigation}
