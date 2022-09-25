@@ -1,7 +1,7 @@
 //react
 import { StackActions } from '@react-navigation/native';
 import React, { useEffect, useRef, useState } from 'react';
-import { Animated, View,BackHandler } from 'react-native';
+import { Animated, View,BackHandler, StatusBar } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Menu, { MenuButton } from '../../../containers/Menu';
 import ProductsList from '../../../containers/RestProductList';
@@ -47,14 +47,18 @@ const Rest = (props) => {
   const insets = useSafeAreaInsets();
   const statusBarHeight = insets.top;
   let headerTransition = translateY.interpolate({
-    inputRange: [171, 342],
-    outputRange: [0, 1],
+    inputRange: [110, 172],
+    outputRange: [2 , 2],
     extrapolate: 'clamp',
+
+    // inputRange: [100, 371],
+    // outputRange: [statusBarHeight, 1],
+    // extrapolate: 'clamp',
   });
 
   let menuTransformY = translateY.interpolate({
-    inputRange: [171, 342],
-    outputRange: [0, 0],
+    inputRange:  [100, 172],
+    outputRange: [2,  1],
     extrapolate: 'clamp',
   });
 
@@ -71,13 +75,18 @@ const Rest = (props) => {
   });
 
   let headerSpace = translateY.interpolate({
-    inputRange: [171, 342],
-    outputRange: [0, statusBarHeight],
+  inputRange:  [0, 72],
+    outputRange: [statusBarHeight - 23, statusBarHeight - 8],
     extrapolate: 'clamp',
+
+    // inputRange:  [0, 72],
+    // outputRange: [statusBarHeight -3, statusBarHeight - 25],
+    // extrapolate: 'clamp',
   });
 
   return (
     <View style={style.menuContainer}>
+      <StatusBar translucent={false} />
       <Animated.View
         style={{
           position: 'absolute',
@@ -107,6 +116,12 @@ const Rest = (props) => {
           this is not the actually header, this header is the animation
           header when user scrolls down or up, the other header with rest info and image is in containers folder called RestHeader
          */}
+          {/* <RestHeader
+          storeInfo={storeInfo}
+          headerSpace={headerSpace}
+          opacity={opacity}
+          navigation={navigation}
+        /> */}
       <RestHeader
         headerSpace={headerSpace}
         opacity={headerTransition}
